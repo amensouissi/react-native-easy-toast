@@ -7,6 +7,7 @@
  */
 
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
     StyleSheet,
     View,
@@ -118,6 +119,7 @@ const styles = StyleSheet.create({
         right: 0,
         alignItems: 'center',
         zIndex: 10000,
+        elevation: 3
     },
     content: {
         backgroundColor: 'black',
@@ -131,16 +133,16 @@ const styles = StyleSheet.create({
 
 Toast.propTypes = {
     style: View.propTypes.style,
-    position: React.PropTypes.oneOf([
+    position: PropTypes.oneOf([
         'top',
         'center',
         'bottom',
     ]),
     textStyle: Text.propTypes.style,
-    positionValue: React.PropTypes.number,
-    fadeInDuration: React.PropTypes.number,
-    fadeOutDuration: React.PropTypes.number,
-    opacity: React.PropTypes.number
+    positionValue: PropTypes.number,
+    fadeInDuration: PropTypes.number,
+    fadeOutDuration: PropTypes.number,
+    opacity: PropTypes.number
 }
 
 Toast.defaultProps = {
